@@ -31,7 +31,7 @@ const Navbar = () => {
     links.splice(4, 1);
   }
   if(isLoggedIn == true && role === 'admin'){
-    links.splice(3, 1);
+    links.splice(2, 2);
   }
 
   const [MobileNav, setMobileNav] = useState("hidden");

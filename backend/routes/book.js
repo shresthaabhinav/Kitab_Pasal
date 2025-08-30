@@ -90,6 +90,24 @@ router.get("/get-recent-books", async (req, res) => {
     }
 });
 
+// Get recommend books limit of 5
+router.get("/get-recommended-books", async (req, res) => {
+  try {
+    const books = await Book.aggregate([
+      { $sample: { size: 5 } } // randomly select 5 books
+    ]);
+
+    return res.json({
+      status: "success",
+      data: books,
+    });
+  } catch (error) {
+    console.error("Error fetching random books:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+});
+
+
 //Get book by ID
 router.get("/get-book-by-id/:id", async (req, res) => {
     try {

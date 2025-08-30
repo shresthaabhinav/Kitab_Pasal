@@ -20,6 +20,7 @@ import UpdateBook from "./pages/UpdateBook";
 import Payment from "./pages/Payment";
 import Esewa from "./components/Esewa";
 import PaymentSuccess from "./components/PaymentSuccess";
+import Fail from "./components/Fail";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -42,6 +43,7 @@ const App = () => {
         <Route exact path="/" element={<Home />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/paymentsuccess" element={<PaymentSuccess />} />
+        <Route path="/paymentfailure" element={<Fail />} />
         <Route path="/esewa" element={<Esewa />} />
         <Route path="/all-books" element={<AllBooks />} />
         <Route path="/cart" element={<Cart />} />

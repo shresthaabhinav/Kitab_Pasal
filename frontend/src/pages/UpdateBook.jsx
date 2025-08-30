@@ -77,7 +77,7 @@ const UpdateBook = () => {
 
   return (
     <div>
-      <div className="h-[100%] p-0 md:p-4">
+      <div className="h-[100%] bg-zinc-900 p-0 md:p-4">
       <h1 className="text-3xl md:text-5xl font-semibold text text-zinc-300 mb-8">
         Edit Book
       </h1>

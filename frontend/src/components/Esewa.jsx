@@ -45,6 +45,7 @@ const Esewa = () => {
   }, [formData.total_amount, formData.transaction_uuid]);
 
   return (
+    <div className='min-h-screen bg-zinc-800 flex items-center justify-center p-6'>
     <form
       action="https://rc-epay.esewa.com.np/api/epay/main/v2/form"
       method="POST"
@@ -86,6 +87,7 @@ const Esewa = () => {
         Pay via eSewa
       </button>
     </form>
+    </div>
   );
 };
 
